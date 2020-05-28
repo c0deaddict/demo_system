@@ -24,7 +24,7 @@ defmodule ExampleSystem.Mixfile do
   def application do
     [
       mod: {ExampleSystem.Application, []},
-      extra_applications: [:logger]
+      extra_applications: [:logger, :runtime_tools, :observer, :wx]
     ]
   end
 
@@ -47,7 +47,6 @@ defmodule ExampleSystem.Mixfile do
       {:plug_cowboy, "~> 2.0"},
       {:plug, "~> 1.7"},
       {:recon, "~> 2.0"},
-      {:distillery, "~> 2.0"},
       {:jason, "~> 1.0"},
       {:swarm, "~> 3.0"},
       {:load_control, path: "../load_control"},

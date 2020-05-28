@@ -29,6 +29,10 @@ defmodule ExampleSystem.Service do
     def init(name), do: {:ok, %{name: name}}
 
     @impl GenServer
+    def handle_call({:swarm, :begin_handoff}, _from, state),
+      do: {:reply, :restart, state}
+
+    @impl GenServer
     def handle_call(:invoke, _from, state),
       do: {:reply, "response from #{state.name} on #{node()}", state}
   end

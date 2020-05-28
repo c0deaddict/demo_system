@@ -38,6 +38,6 @@ defmodule ExampleSystemWeb.Endpoint do
   def init(_key, config), do: {:ok, put_in(config[:http][:port], port())}
 
   defp port() do
-    if node() == :"node2@127.0.0.1", do: 4001, else: 4000
+    if node() == :"node2@127.0.0.1", do: 4002, else: 4001
   end
 end
