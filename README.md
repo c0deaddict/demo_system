@@ -26,9 +26,9 @@ iex -S mix phx.server
 
 Then, you can visit the following links:
 
-  - http://localhost:4000
-  - http://localhost:4000/load
-  - http://localhost:4000/services
+  - http://localhost:4001
+  - http://localhost:4001/load
+  - http://localhost:4001/services
 
 ## Demo
 
@@ -37,17 +37,23 @@ Building and starting for production (in the background):
 ```
 cd example_system
 ./rebuild.sh
-./_build/prod/rel/system/bin/system start
+./_build/prod/rel/example_system/bin/example_system start
 ```
 
 Open the remote console:
 
 ```
-./_build/prod/rel/system/bin/system remote_console
+./_build/prod/rel/example_system/bin/example_system remote
 ```
 
 Hot upgrade with no downtime:
 
 ```
 mix system.upgrade
+```
+
+Start a second node
+
+```
+mix system.node2
 ```
